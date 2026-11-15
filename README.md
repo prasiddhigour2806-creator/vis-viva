@@ -127,7 +127,6 @@ calculate the satellite’s current radius, position, velocity, and speed.
 vis-viva-orbital-simulator/
 ├── index.html
 ├── style.css
-├── orbital-mechanics.js
 ├── main.js
 ├── README.md
 └── .gitignore
