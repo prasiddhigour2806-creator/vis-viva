@@ -115,21 +115,6 @@ calculate the satellite’s current radius, position, velocity, and speed.
 3. Adjust the orbital elements using the control panel.
 4. Use the camera to rotate, zoom, and explore the orbit.
 
-An internet connection is required the first time the page loads because
-Three.js is loaded from a public CDN.
-
-## GitHub Pages Deployment
-
-1. Push or upload all project files to a GitHub repository.
-2. Open **Settings**.
-3. Select **Pages**.
-4. Under **Build and deployment**, choose:
-   - Source: **Deploy from a branch**
-   - Branch: **main**
-   - Folder: **/ (root)**
-5. Save the settings.
-6. GitHub Pages will generate a public website link.
-
 ## Project Structure
 
 ```text
