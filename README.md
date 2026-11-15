@@ -142,16 +142,6 @@ vis-viva-orbital-simulator/
 └── .gitignore
 ```
 
-## Future Improvements
-
-- Real satellite TLE data integration
-- NASA/JPL Horizons data support
-- Atmospheric drag modeling
-- J2 gravitational perturbation
-- Ground-track visualization
-- Multiple-satellite comparison
-- Delta-v maneuver simulation
-- Orbital-element export and telemetry CSV download
 
 ## License
 
