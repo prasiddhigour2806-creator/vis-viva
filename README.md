@@ -7,6 +7,12 @@ The project converts orbital elements into an Earth-Centered Inertial (ECI)
 state vector, advances the satellite through time using Kepler’s equation,
 and displays its instantaneous orbital speed using the vis-viva equation.
 
+## Live Website
+
+[Open the Vis-Viva Orbital Simulator](https://prasiddhigour2806-creator.github.io/vis-viva/)
+
+The website runs directly in a web browser. No installation is required.
+
 ## Features
 
 - Interactive 3D Earth and satellite visualization
