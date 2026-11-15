@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #e8eef7;
+  background: #05070d;
+}
+
+#scene {
+  position: fixed;
+  inset: 0;
+}
+
+.panel {
+  position: fixed;
+  z-index: 10;
+  width: 310px;
+  max-height: calc(100vh - 32px);
+  padding: 16px;
+  overflow-y: auto;
+  border: 1px solid rgba(90, 150, 255, 0.25);
+  border-radius: 14px;
+  background: rgba(9, 15, 27, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.controls {
+  top: 16px;
+  left: 16px;
+}
+
+.telemetry {
+  top: 16px;
+  right: 16px;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  color: #7fb4ff;
+}
+
+.subtitle {
+  margin: 0 0 14px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #93a4ba;
+}
+
+h2 {
+  margin: 14px 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9fc2ff;
+}
+
+label {
+  display: block;
+  margin: 10px 0 4px;
+  font-size: 11px;
+  color: #b9c7d9;
+}
+
+label span {
+  float: right;
+  font-family: monospace;
+  color: #8fd3ff;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #3d8bff;
+}
+
+.button-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+button {
+  flex: 1;
+  padding: 9px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #2f6fd0;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #33425a;
+}
+
+button:hover {
+  filter: brightness(1.12);
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 7px 0;
+  font-size: 12px;
+}
+
+.metric span:first-child {
+  color: #b9c7d9;
+}
+
+.metric span:last-child {
+  font-family: monospace;
+  text-align: right;
+  color: #8fd3ff;
+}
+
+.note {
+  margin-top: 14px;
+  font-size: 10px;
+  line-height: 1.45;
+  color: #8794a6;
+}
+
+@media (max-width: 850px) {
+  .panel {
+    width: calc(100% - 24px);
+    max-height: 42vh;
+  }
+
+  .controls {
+    top: 12px;
+    left: 12px;
+  }
+
+  .telemetry {
+    top: auto;
+    right: 12px;
+    bottom: 12px;
+  }
+}

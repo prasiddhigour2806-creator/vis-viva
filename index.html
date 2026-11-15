@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vis-Viva Orbital Simulator</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="scene"></div>
+
+  <aside class="panel controls">
+    <h1>Vis-Viva Orbital Simulator</h1>
+    <p class="subtitle">
+      Classical orbital elements, Keplerian propagation, and vis-viva velocity
+    </p>
+
+    <h2>Orbital elements</h2>
+
+    <label for="semiMajorAxis">
+      Semi-major axis, a
+      <span id="semiMajorAxisValue">10,000 km</span>
+    </label>
+    <input id="semiMajorAxis" type="range" min="6778" max="50000" step="10" value="10000" />
+
+    <label for="eccentricity">
+      Eccentricity, e
+      <span id="eccentricityValue">0.100</span>
+    </label>
+    <input id="eccentricity" type="range" min="0" max="0.85" step="0.005" value="0.1" />
+
+    <label for="inclination">
+      Inclination, i
+      <span id="inclinationValue">30°</span>
+    </label>
+    <input id="inclination" type="range" min="0" max="180" step="1" value="30" />
+
+    <label for="raan">
+      RAAN, Ω
+      <span id="raanValue">40°</span>
+    </label>
+    <input id="raan" type="range" min="0" max="360" step="1" value="40" />
+
+    <label for="argumentOfPeriapsis">
+      Argument of periapsis, ω
+      <span id="argumentOfPeriapsisValue">30°</span>
+    </label>
+    <input id="argumentOfPeriapsis" type="range" min="0" max="360" step="1" value="30" />
+
+    <label for="initialTrueAnomaly">
+      Initial true anomaly, ν₀
+      <span id="initialTrueAnomalyValue">60°</span>
+    </label>
+    <input id="initialTrueAnomaly" type="range" min="0" max="360" step="1" value="60" />
+
+    <label for="timeScale">
+      Time scale
+      <span id="timeScaleValue">1,000×</span>
+    </label>
+    <input id="timeScale" type="range" min="1" max="10000" step="10" value="1000" />
+
+    <div class="button-row">
+      <button id="playPauseButton">Pause</button>
+      <button id="resetButton" class="secondary">Reset</button>
+    </div>
+
+    <p class="note">
+      Earth’s radius is exaggerated for visibility. Calculations use kilometers,
+      seconds, and Earth’s gravitational parameter μ = 398,600.4418 km³/s².
+    </p>
+  </aside>
+
+  <aside class="panel telemetry">
+    <h1>Live telemetry</h1>
+
+    <div class="metric">
+      <span>Radius, r</span>
+      <span id="radiusOutput">—</span>
+    </div>
+
+    <div class="metric">
+      <span>Speed, v</span>
+      <span id="speedOutput">—</span>
+    </div>
+
+    <div class="metric">
+      <span>True anomaly, ν</span>
+      <span id="trueAnomalyOutput">—</span>
+    </div>
+
+    <div class="metric">
+      <span>Orbital period</span>
+      <span id="periodOutput">—</span>
+    </div>
+
+    <div class="metric">
+      <span>Periapsis radius</span>
+      <span id="periapsisOutput">—</span>
+    </div>
+
+    <div class="metric">
+      <span>Apoapsis radius</span>
+      <span id="apoapsisOutput">—</span>
+    </div>
+
+    <div class="metric">
+      <span>ECI position</span>
+      <span id="positionOutput">—</span>
+    </div>
+
+    <div class="metric">
+      <span>ECI velocity</span>
+      <span id="velocityOutput">—</span>
+    </div>
+
+    <div class="metric">
+      <span>Elapsed time</span>
+      <span id="timeOutput">—</span>
+    </div>
+  </aside>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
